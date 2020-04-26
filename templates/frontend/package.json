@@ -1,0 +1,26 @@
+{
+    "name": "package-name",
+    "version": "0.0.1",
+    "description": "Package Description",
+    "author": "Adriano Cahete",
+    "private": true,
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development <devstart>",
+        "build": "nuxt build",
+        "start": "cross-env NODE_ENV=development <start>",
+        "performance": "cross-env LIGHTHOUSE_BADGES_PARAMS=\"--emulated-form-factor desktop\" npx lighthouse-badges --urls https://adrianocahete.dev/ -r -o ./static/performance/ -b flat",
+        "perf_single": "cross-env LIGHTHOUSE_BADGES_PARAMS=\"--emulated-form-factor desktop\" npx lighthouse-badges --urls https://adrianocahete.dev/ -s -o ./static/performance/ -b flat",
+        "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    },
+    "engines": {
+        "npm": "~13.11.0"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.2",
+        "eslint": "^6.8.0",
+        "stylus": "^0.54.7",
+        "stylus-loader": "^3.0.2"
+    }
+}
