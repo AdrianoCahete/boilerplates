@@ -1,0 +1,55 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: var(--textColor, #000000);  
+  transition: ease all .3s;
+}
+
+html {
+  scrollbar-color: rgba(255, 255, 255, .8) @background; // <Thumb> <Track> -- Browser Customizations
+  scrollbar-width: thin;  // Browser Customizations
+  scroll-behavior: smooth;
+}
+
+// Browser Customizations
+// Scrollbar for Chrome
+// https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--scrollbarColor);
+    border-radius: 3px;
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+    background: rgb(110, 110, 110);
+    border-radius: 10px;
+
+  &:hover {
+      background: rgb(110, 110, 110);
+  }
+}
+
+::-webkit-scrollbar-track-piece {
+    // not handle on
+    background: var(--scrollbarColor);
+}
+
+body {
+  font-size: 1.6rem;
+}
